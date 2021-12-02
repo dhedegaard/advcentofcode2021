@@ -7,7 +7,7 @@ fn measure_and_print(day: i32, part: i32, func: &dyn Fn() -> i32) {
     let result = func();
     let elapsed = now.elapsed();
     println!(
-        "Day {day:02}, Part {part}: {result} ({elapsed:?}ms)",
+        "Day {day:02}, Part {part}: {result} ({elapsed:?})",
         day = day,
         part = part,
         result = result,
