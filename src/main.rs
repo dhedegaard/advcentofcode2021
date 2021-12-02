@@ -6,7 +6,13 @@ fn measure_and_print(day: i32, part: i32, func: &dyn Fn() -> i32) {
     let now = Instant::now();
     let result = func();
     let elapsed = now.elapsed();
-    println!("Day {}, Part {}: {} ({:?}ms)", day, part, result, elapsed);
+    println!(
+        "Day {day:02}, Part {part}: {result} ({elapsed:?}ms)",
+        day = day,
+        part = part,
+        result = result,
+        elapsed = elapsed
+    );
 }
 
 fn main() {
