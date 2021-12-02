@@ -8,7 +8,7 @@ fn measure_and_print(day: i32, part: i32, func: &dyn Fn() -> i32) {
     let result = func();
     let elapsed = now.elapsed();
     println!(
-        "Day {day:02}, Part {part}: {result} ({elapsed:?})",
+        "Day {day:02}, Part {part}: {result: <20} ({elapsed:?})",
         day = day,
         part = part,
         result = result,
@@ -23,4 +23,5 @@ fn main() {
 
     let day02_input = day02::parse_input(&day02::raw_input());
     measure_and_print(2, 1, &|| day02::part1(&day02_input));
+    measure_and_print(2, 2, &|| day02::part2(&day02_input));
 }

@@ -47,6 +47,25 @@ pub fn part1(input: &[Instruction]) -> i32 {
     position * depth
 }
 
+pub fn part2(input: &[Instruction]) -> i32 {
+    let mut position = 0;
+    let mut depth = 0;
+    let mut aim = 0;
+
+    for instruction in input {
+        match instruction.direction {
+            Direction::Forward => {
+                position += instruction.unit;
+                depth += aim * instruction.unit;
+            }
+            Direction::Down => aim += instruction.unit,
+            Direction::Up => aim -= instruction.unit,
+        }
+    }
+
+    position * depth
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;
@@ -63,5 +82,17 @@ mod tests {
     fn test_part1() {
         let input = parse_input(&raw_input());
         assert_eq!(part1(&input), 1451208);
+    }
+
+    #[test]
+    fn examples_part2() {
+        let input = parse_input(&TEST_INPUT);
+        assert_eq!(part2(&input), 900);
+    }
+
+    #[test]
+    fn test_part2() {
+        let input = parse_input(&raw_input());
+        assert_eq!(part2(&input), 1620141160);
     }
 }
