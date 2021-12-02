@@ -10,5 +10,5 @@ fn main() {
     println!("Day 01 - part 1: {} - took: {:?}", result, now.elapsed());
     let now = Instant::now();
     let result = day01::part2(&day01_input);
-    println!("Day 01 - part 1: {} - took: {:?}", result, now.elapsed());
+    println!("Day 01 - part 2: {} - took: {:?}", result, now.elapsed());
 }
