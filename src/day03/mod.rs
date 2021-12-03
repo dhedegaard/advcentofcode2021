@@ -11,7 +11,7 @@ pub fn parse_input(input: &str) -> Vec<u16> {
         .collect()
 }
 
-pub fn part1(input: &[u16]) -> usize {
+pub fn part1(input: &[u16]) -> i32 {
     let mut gamma_rate = 0;
     let mut epsilon_rate = 0;
     (0..16u16).for_each(|pos| {

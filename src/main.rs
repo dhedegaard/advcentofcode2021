@@ -27,4 +27,7 @@ fn main() {
     let day02_input = day02::parse_input(&day02::raw_input());
     measure_and_print(2, 1, &|| day02::part1(&day02_input));
     measure_and_print(2, 2, &|| day02::part2(&day02_input));
+
+    let day03_input = day03::parse_input(&day03::raw_input());
+    measure_and_print(3, 1, &|| day03::part1(&day03_input));
 }
