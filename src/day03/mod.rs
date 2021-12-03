@@ -21,7 +21,6 @@ pub fn part1(input: &[u16]) -> usize {
         }
         let zeroes = bits.get(&false).unwrap();
         let ones = bits.get(&true).unwrap();
-        println!("{:?}", bits);
         if ones > zeroes {
             gamma_rate += 1 << pos;
         } else {
