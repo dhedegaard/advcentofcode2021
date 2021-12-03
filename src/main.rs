@@ -1,7 +1,10 @@
+extern crate itertools;
+
 use std::time::Instant;
 
 mod day01;
 mod day02;
+mod day03;
 
 fn measure_and_print(day: i32, part: i32, func: &dyn Fn() -> i32) {
     let now = Instant::now();
